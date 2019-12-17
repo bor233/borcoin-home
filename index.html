@@ -1,5 +1,159 @@
-<!DOCTYPE html><html lang=zh-CN><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>ThorUI</title><script>document.addEventListener('DOMContentLoaded', function() {
-                document.documentElement.style.fontSize = document.documentElement.clientWidth / 20 + 'px'
-            })
-            var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') || CSS.supports('top: constant(a)'))
-            document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' + (coverSupport ? ', viewport-fit=cover' : '') + '" />')</script><link rel=stylesheet href=/static/index.css></head><body><noscript><strong>Please enable JavaScript to continue.</strong></noscript><div id=app></div><script src=/static/js/chunk-vendors.eb02a622.js></script><script src=/static/js/index.a4680902.js></script></body></html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+		<script type="text/javascript" src="js/ethers-v4.min.js" charset="utf-8"></script>
+	</head>
+	<body>
+			
+			<table>
+				<tr>
+				    <th>分割线:</th>
+					<td><div style="font-size: 20px">===ETZ以太零===</div></td>
+				</tr>
+				<tr>
+				    <th>私钥:</th>
+				    <td><input type="text" placeholder="你的私钥,不会进行任何记录" id="select-privatekey" /></td>
+				</tr>
+				<tr>
+				    <th>余额:</th>
+					<td><input disabled type="text" id="select-balance" value="0"/></td>
+				</tr>
+			    
+				
+				<tr>
+				    <th>To(发送至地址):</th>
+					<td><input type="text" id="toAddress" value=""/></td>
+				</tr>
+				<tr>
+				    <th>发送ETZ数量(单位/1枚):</th>
+					<td><input type="text" id="etzAmount" value=""/></td>
+				</tr>
+				
+				<tr>
+				    <th>返回交易hash:</th>
+					<td><input disabled type="text" id="tAddress" value="暂没有"/></td>
+				</tr>
+				
+				
+				<tr>
+				    <td> </td>
+				    <td>
+				        <button id="select-submit-privatekey" class="submit">查询余额</button>
+						<button onclick="send()">发送交易</button>
+				    </td>
+					
+				</tr>
+				
+			</table>
+	</body>
+	<script>
+		var provider = new ethers.providers.JsonRpcProvider("http://47.90.101.201:9646/");
+		
+		// 使用JQuery获取两个UI标签
+		var inputPrivatekey = $('#select-privatekey');
+		var submit = $('#select-submit-privatekey');
+		
+		
+				
+		// 点击“加载私钥”时， 创建对应的钱包
+		submit.click(function() {
+		    getProvider()
+		});
+		
+		function send(){
+			vyisSend()
+		}
+		
+		function vyisSend(){
+			var privateKey = inputPrivatekey.val();
+			var toAddress=$("#toAddress").val()
+			var etzAmount=$("#etzAmount").val()+"000000000000000000"
+			alert(toAddress,etzAmount)
+			if(privateKey==""){
+				alert('私钥必须填写且正确,否则无法加载信息')
+				return
+			}else if(toAddress==""){
+				alert('地址需要填写并且填写正确，否则一旦成交无法找回')
+				return
+			}else if(etzAmount==""){
+				alert('发送数量需要大于0')
+				return
+			}else if(parseInt(etzAmount)==0&&parseFloat(etzAmount)>0){
+				alert('暂不支持小数点发送')
+				return
+			}
+			sendTransactionSign()
+		}
+		
+		function sendTransactionSign(){
+			// var txParams = {
+			//   nonce: '0x00',
+			//   gasPrice: '0x09184e72a000',
+			//   gasLimit: '0x2710',
+			//   to: '0xb66f25c0ab2E0c65b4F033600F9cE8f73d87eBe2',
+			//   value: '0x00',
+			//   data: '0x7f7465737432000000000000000000000000000000000000000000000000000000600057',
+			//   chainId: 90
+			// }
+			// var tx = new EthereumTx(txParams)
+			// tx.sign(privateKey)
+			// var serializedTx = tx.serialize()
+			// console.log(serializedTx)
+			
+			console.log('进入交易签名')
+			var privateKey = inputPrivatekey.val();
+			var toAddress=$("#toAddress").val()
+			var etzAmount=$("#etzAmount").val()+"000000000000000000"
+			
+			
+			if (privateKey.substring(0, 2) !== '0x') { privateKey = '0x' + privateKey; }
+			var wallet = new ethers.Wallet(privateKey);
+			var activeWallet = wallet.connect(provider);
+			
+			var amount = ethers.utils.bigNumberify(etzAmount);
+			console.log(activeWallet)
+			console.log(amount)
+			activeWallet.sendTransaction({
+			           to: toAddress,
+			           value: amount,
+			           gasPrice: activeWallet.provider.getGasPrice(),
+			           gasLimit: 21000,
+			       }).then(function(tx) {
+					   console.log(tx)
+					   $("#tAddress").val("https://etzscan.com/tx/"+tx.hash)
+			       });	
+		}
+		
+		
+		//通过私钥读取账户
+		function getProvider(){
+			var privateKey = inputPrivatekey.val();
+			if (privateKey.substring(0, 2) !== '0x') { privateKey = '0x' + privateKey; }
+			var wallet = new ethers.Wallet(privateKey);
+			var activeWallet = wallet.connect(provider);
+			console.log(activeWallet)
+			
+			activeWallet.getBalance().then(function(balance) {
+				var b= ethers.utils.formatEther(balance, { commify: true })
+				console.log(b)
+				$('#select-balance').val(b)
+			});
+		} 
+		
+		//创建账户
+		function creaPrivatekey(){
+			// 生成一个默认的私钥
+			var randomNumber = ethers.utils.bigNumberify(ethers.utils.randomBytes(32));
+			inputPrivatekey.val(randomNumber._hex);
+			
+			var privateKey = inputPrivatekey.val();
+			console.log(privateKey)
+			if (privateKey.substring(0, 2) !== '0x') { privateKey = '0x' + privateKey; }
+			var wallet = new ethers.Wallet(privateKey);
+			console.log(wallet)
+		}	
+	</script>
+</html>
