@@ -1,159 +1,530 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title></title>
-		<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-		<script type="text/javascript" src="js/ethers-v4.min.js" charset="utf-8"></script>
-	</head>
-	<body>
+<html lang="en" class=""><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Roam漫游社区</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600|Montserrat:200,300,400" rel="stylesheet">
+
+	<link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
+<link rel="stylesheet" href="assets/fonts/ionicons/css/ionicons.min.css">
+<!-- <link rel="stylesheet" href="assets/fonts/law-icons/font/flaticon.css"> -->
+
+<link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="assets/css/slick.css">
+<link rel="stylesheet" href="assets/css/slick-theme.css">
+
+<link rel="stylesheet" href="assets/css/helpers.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/landing-2.css">
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css"></head>
+<body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
+
+<nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light scrolled awake" id="pb-navbar">
+  <div class="container">
+	<a class="navbar-brand" href="index.html">Roam Community</a>
+	<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#probootstrap-navbar" aria-controls="probootstrap-navbar" aria-expanded="false" aria-label="Toggle navigation">
+	  <span><i class="ion-navicon"></i></span>
+	</button>
+	<div class="collapse navbar-collapse" id="probootstrap-navbar">
+	  <ul class="navbar-nav ml-auto">
+		<li class="nav-item"><a class="nav-link" href="#section-home">首页</a></li>
+		<li class="nav-item"><a class="nav-link active" href="#section-features">社区</a></li>
+		<!-- <li class="nav-item"><a class="nav-link" href="#section-reviews">Reviews</a></li>
+		<li class="nav-item"><a class="nav-link" href="#section-pricing">Pricing</a></li> -->
+		<li class="nav-item"><a class="nav-link" href="#section-faq">帮助</a></li>
+		<li class="nav-item cta-btn ml-xl-2 ml-lg-2 ml-md-0 ml-sm-0 ml-0"><a class="nav-link" href="" target="_blank"><span class="pb_rounded-4 px-4">Start Roaming</span></a></li>
+	  </ul>
+	</div>
+  </div>
+</nav>
+<!-- END nav -->
+
+
+
+
+<section class="pb_cover_v3 overflow-hidden cover-bg-indigo cover-bg-opacity text-left pb_gradient_v1 pb_slant-light" id="section-home">
+  <div class="container">
+	<div class="row align-items-center justify-content-center">
+	  <div class="col-md-6">
+		<h2 class="heading mb-3">Roam漫游社区</h2>
+		<div class="sub-heading">
+		  <p class="mb-4">社区地址：<a href="" target="_blank">bor233.com</a>，拥抱区块链，是一个在Dapp基础上建立的价值社区<a href="#" target="_blank"></a></p>
+		  <p class="mb-5"><a class="btn btn-success btn-lg pb_btn-pill smoothscroll" href="#section-pricing"><span class="pb_font-14 text-uppercase pb_letter-spacing-1">白皮书</span></a></p>
+		</div>
+	  </div> 
+	  <div class="col-md-1">
+	  </div>
+<!-- 	  <div class="col-md-5 relative align-self-center">
+		
+		<form action="#" class="bg-white rounded pb_form_v1">
+		  <h2 class="mb-4 mt-0 text-center">Sign Up for Free</h2>
+		  <div class="form-group">
+			<input type="text" class="form-control pb_height-50 reverse" placeholder="Full name">
+		  </div>
+		  <div class="form-group">
+			<input type="text" class="form-control pb_height-50 reverse" placeholder="Email">
+		  </div>
+		  <div class="form-group">
+			<input type="text" class="form-control pb_height-50 reverse" placeholder="Email">
+		  </div>
+		  <div class="form-group">
+			<div class="pb_select-wrap">
+			  <select class="form-control pb_height-50 reverse">
+				<option value="" selected>Type</option>
+				<option value="">Basic</option>
+				<option value="">Business</option>
+				<option value="">Free</option>
+			  </select>
+			</div>
+		  </div>
+		  <div class="form-group">
+			<input type="submit" class="btn btn-primary btn-lg btn-block pb_btn-pill  btn-shadow-blue" value="Register">
+		  </div>
+		</form>
+
+	  </div> 
+ -->	</div>
+  </div>
+</section>
+<!-- END section -->
+
+<section class="pb_section bg-light pb_slant-white pb_pb-250" id="section-features">
+  <div class="container">
+	<div class="row justify-content-center mb-5">
+	  <div class="col-md-6 text-center mb-5">
+		<h5 class="text-uppercase pb_font-15 mb-2 pb_color-dark-opacity-3 pb_letter-spacing-2"><strong>community</strong></h5>
+		<h2>应用与价值</h2>
+	  </div>
+	</div>
+	<div class="row">
+	 <!-- <div class="col-lg-4 col-md- col-sm-6">
+		<div class="media d-block pb_feature-v1 text-left">
+		  <div class="pb_icon"><i class="ion-ios-bookmarks-outline pb_icon-gradient"></i></div>
+		  <div class="media-body">
+			<h5 class="mt-0 mb-3 heading">Minimal Design</h5>
+			<p class="text-sans-serif">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+		  </div>
+		</div>
+	  </div> -->
+	 <!-- <div class="col-lg-4 col-md- col-sm-6">
+	 	<div class="media d-block pb_feature-v1 text-left">
+	 	  <div class="pb_icon"><i class="ion-ios-color-filter-outline pb_icon-gradient"></i></div>
+	 	  <div class="media-body">
+	 		<h5 class="mt-0 mb-3 heading">Component Based Design</h5>
+	 		<p class="text-sans-serif">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	 	  </div>
+	 	</div>
+	   </div> -->
+	 <!-- <div class="col-lg-4 col-md- col-sm-6">
+	 	<div class="media d-block pb_feature-v1 text-left">
+	 	  <div class="pb_icon"><i class="ion-ios-wineglass-outline pb_icon-gradient"></i></div>
+	 	  <div class="media-body">
+	 		<h5 class="mt-0 mb-3 heading">Clean Code</h5>
+	 		<p class="text-sans-serif">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	 	  </div>
+	 	</div>
+	   </div> -->
+	 
+	 
+	 <div class="col-lg-4 col-md- col-sm-6">
+	 	<div class="media d-block pb_feature-v1 text-left">
+	 	  <div class="pb_icon"><i class="ion-ios-paperplane-outline pb_icon-gradient"></i></div>
+	 	  <div class="media-body">
+	 		<h5 class="mt-0 mb-3 heading">社区数据价值上链</h5>
+	 		<p class="text-sans-serif">实现一个价值社区网络，社区不仅采用自己的代币，还将价值数据上链</p>
+	 	  </div>
+	 	</div>
+	   </div>
+	 <div class="col-lg-4 col-md- col-sm-6">
+	 		<div class="media d-block pb_feature-v1 text-left">
+	 		  <div class="pb_icon"><i class="ion-ios-infinite-outline pb_icon-gradient"></i></div>
+	 		  <div class="media-body">
+	 			<h5 class="mt-0 mb-3 heading">有待完善</h5>
+	 			<p class="text-sans-serif">数据</p>
+	 		  </div>
+	 		</div>
+	 </div>
+	 <div class="col-lg-4 col-md- col-sm-6">
+		<div class="media d-block pb_feature-v1 text-left">
+		  <div class="pb_icon"><i class="ion-ios-speedometer-outline pb_icon-gradient"></i></div>
+		  <div class="media-body">
+			<h5 class="mt-0 mb-3 heading">有待完善</h5>
+			<p class="text-sans-serif">有待完善</p>
+		  </div>
+		</div>
+	  </div>
+
+	</div>
+  </div>
+</section>
+<!-- END section -->
+
+<!-- <section class="pb_section pb_slant-light">
+  <div class="container">
+	<div class="row">
+	  <div class="col-lg-4 mb-5">
+		<img src="assets/images/phone_3.png" alt="Image placeholder" class="img-fluid">
+	  </div>
+	  <div class="col-lg-8 pl-md-5 pl-sm-0">
+		<div class="row">
+		  <div class="col">
+			<h2>Application Features</h2>
+			<p class="pb_font-20">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-lg">
 			
-			<table>
-				<tr>
-				    <th>分割线:</th>
-					<td><div style="font-size: 20px">===ETZ以太零===</div></td>
-				</tr>
-				<tr>
-				    <th>私钥:</th>
-				    <td><input type="text" placeholder="你的私钥,不会进行任何记录" id="select-privatekey" /></td>
-				</tr>
-				<tr>
-				    <th>余额:</th>
-					<td><input disabled type="text" id="select-balance" value="0"/></td>
-				</tr>
-			    
-				
-				<tr>
-				    <th>To(发送至地址):</th>
-					<td><input type="text" id="toAddress" value=""/></td>
-				</tr>
-				<tr>
-				    <th>发送ETZ数量(单位/1枚):</th>
-					<td><input type="text" id="etzAmount" value=""/></td>
-				</tr>
-				
-				<tr>
-				    <th>返回交易hash:</th>
-					<td><input disabled type="text" id="tAddress" value="暂没有"/></td>
-				</tr>
-				
-				
-				<tr>
-				    <td> </td>
-				    <td>
-				        <button id="select-submit-privatekey" class="submit">查询余额</button>
-						<button onclick="send()">发送交易</button>
-				    </td>
-					
-				</tr>
-				
-			</table>
-	</body>
-	<script>
-		var provider = new ethers.providers.JsonRpcProvider("http://47.90.101.201:9646/");
-		
-		// 使用JQuery获取两个UI标签
-		var inputPrivatekey = $('#select-privatekey');
-		var submit = $('#select-submit-privatekey');
-		
-		
-				
-		// 点击“加载私钥”时， 创建对应的钱包
-		submit.click(function() {
-		    getProvider()
-		});
-		
-		function send(){
-			vyisSend()
-		}
-		
-		function vyisSend(){
-			var privateKey = inputPrivatekey.val();
-			var toAddress=$("#toAddress").val()
-			var etzAmount=$("#etzAmount").val()+"000000000000000000"
-			alert(toAddress,etzAmount)
-			if(privateKey==""){
-				alert('私钥必须填写且正确,否则无法加载信息')
-				return
-			}else if(toAddress==""){
-				alert('地址需要填写并且填写正确，否则一旦成交无法找回')
-				return
-			}else if(etzAmount==""){
-				alert('发送数量需要大于0')
-				return
-			}else if(parseInt(etzAmount)==0&&parseFloat(etzAmount)>0){
-				alert('暂不支持小数点发送')
-				return
-			}
-			sendTransactionSign()
-		}
-		
-		function sendTransactionSign(){
-			// var txParams = {
-			//   nonce: '0x00',
-			//   gasPrice: '0x09184e72a000',
-			//   gasLimit: '0x2710',
-			//   to: '0xb66f25c0ab2E0c65b4F033600F9cE8f73d87eBe2',
-			//   value: '0x00',
-			//   data: '0x7f7465737432000000000000000000000000000000000000000000000000000000600057',
-			//   chainId: 90
-			// }
-			// var tx = new EthereumTx(txParams)
-			// tx.sign(privateKey)
-			// var serializedTx = tx.serialize()
-			// console.log(serializedTx)
+			<div class="media pb_feature-v2 text-left mb-1 mt-5">
+			  <div class="pb_icon d-flex mr-3 align-self-start pb_w-15"><i class="ion-ios-bookmarks-outline pb_icon-gradient"></i></div>
+			  <div class="media-body">
+				<h3 class="mt-2 mb-2 heading">Minimal Design</h3>
+				<p class="text-sans-serif pb_font-16">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+			  </div>
+			</div> 
 			
-			console.log('进入交易签名')
-			var privateKey = inputPrivatekey.val();
-			var toAddress=$("#toAddress").val()
-			var etzAmount=$("#etzAmount").val()+"000000000000000000"
+			<div class="media pb_feature-v2 text-left mb-1 mt-5">
+			  <div class="pb_icon d-flex mr-3 align-self-start pb_w-15"><i class="ion-ios-infinite-outline pb_icon-gradient"></i></div>
+			  <div class="media-body">
+				<h3 class="mt-2 mb-2 heading">Unlimited Posibilities</h3>
+				<p class="text-sans-serif pb_font-16">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+			  </div>
+			</div> 
+
+		  </div>
+		  <div class="col-lg">
 			
-			
-			if (privateKey.substring(0, 2) !== '0x') { privateKey = '0x' + privateKey; }
-			var wallet = new ethers.Wallet(privateKey);
-			var activeWallet = wallet.connect(provider);
-			
-			var amount = ethers.utils.bigNumberify(etzAmount);
-			console.log(activeWallet)
-			console.log(amount)
-			activeWallet.sendTransaction({
-			           to: toAddress,
-			           value: amount,
-			           gasPrice: activeWallet.provider.getGasPrice(),
-			           gasLimit: 21000,
-			       }).then(function(tx) {
-					   console.log(tx)
-					   $("#tAddress").val("https://etzscan.com/tx/"+tx.hash)
-			       });	
-		}
+			<div class="media pb_feature-v2 text-left mb-1 mt-5">
+			  <div class="pb_icon d-flex mr-3 align-self-start pb_w-15"><i class="ion-ios-speedometer-outline pb_icon-gradient"></i></div>
+			  <div class="media-body">
+				<h3 class="mt-2 mb-2 heading">Fast Loading</h3>
+				<p class="text-sans-serif pb_font-16">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+			  </div>
+			</div>
+
+			<div class="media pb_feature-v2 text-left mb-1 mt-5">
+			  <div class="pb_icon d-flex mr-3 align-self-start pb_w-15"><i class="ion-ios-color-filter-outline  pb_icon-gradient"></i></div>
+			  <div class="media-body">
+				<h3 class="mt-2 mb-2 heading">Component Based Design</h3>
+				<p class="text-sans-serif pb_font-16">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+			  </div>
+			</div>    
+
+		  </div>
+		</div>
 		
-		
-		//通过私钥读取账户
-		function getProvider(){
-			var privateKey = inputPrivatekey.val();
-			if (privateKey.substring(0, 2) !== '0x') { privateKey = '0x' + privateKey; }
-			var wallet = new ethers.Wallet(privateKey);
-			var activeWallet = wallet.connect(provider);
-			console.log(activeWallet)
+	  </div>
+	</div>
+  </div>
+</section>
+ -->
+ <!-- END section -->
+<div class="tlinks">Collect from <a href="#" title="首页">首页</a></div>
+<!-- <section class="pb_section bg-light pb_slant-white">
+  <div class="container">
+	<div class="row">
+	  <div class="col-lg-4 order-2">
+		<img src="assets/images/phone_3.png" alt="Image placeholder" class="img-fluid">
+	  </div>
+	  <div class="col-lg-8 pr-md-5 pr-sm-0 order-1  mb-5">
+		<div class="row">
+		  <div class="col">
+			<h2>Application Features</h2>
+			<p class="pb_font-20">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-lg">
 			
-			activeWallet.getBalance().then(function(balance) {
-				var b= ethers.utils.formatEther(balance, { commify: true })
-				console.log(b)
-				$('#select-balance').val(b)
-			});
-		} 
-		
-		//创建账户
-		function creaPrivatekey(){
-			// 生成一个默认的私钥
-			var randomNumber = ethers.utils.bigNumberify(ethers.utils.randomBytes(32));
-			inputPrivatekey.val(randomNumber._hex);
+			<div class="media pb_feature-v2 text-left mb-1 mt-5">
+			  <div class="pb_icon d-flex mr-3 align-self-start pb_w-15"><i class="ion-ios-bookmarks-outline pb_icon-gradient"></i></div>
+			  <div class="media-body">
+				<h3 class="mt-2 mb-2 heading">Minimal Design</h3>
+				<p class="text-sans-serif pb_font-16">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+			  </div>
+			</div> 
 			
-			var privateKey = inputPrivatekey.val();
-			console.log(privateKey)
-			if (privateKey.substring(0, 2) !== '0x') { privateKey = '0x' + privateKey; }
-			var wallet = new ethers.Wallet(privateKey);
-			console.log(wallet)
-		}	
-	</script>
-</html>
+			<div class="media pb_feature-v2 text-left mb-1 mt-5">
+			  <div class="pb_icon d-flex mr-3 align-self-start pb_w-15"><i class="ion-ios-infinite-outline pb_icon-gradient"></i></div>
+			  <div class="media-body">
+				<h3 class="mt-2 mb-2 heading">Unlimited Posibilities</h3>
+				<p class="text-sans-serif pb_font-16">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+			  </div>
+			</div> 
+
+		  </div>
+		  <div class="col-lg">
+			
+			<div class="media pb_feature-v2 text-left mb-1 mt-5">
+			  <div class="pb_icon d-flex mr-3 align-self-start pb_w-15"><i class="ion-ios-speedometer-outline pb_icon-gradient"></i></div>
+			  <div class="media-body">
+				<h3 class="mt-2 mb-2 heading">Fast Loading</h3>
+				<p class="text-sans-serif pb_font-16">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+			  </div>
+			</div>
+
+			<div class="media pb_feature-v2 text-left mb-1 mt-5">
+			  <div class="pb_icon d-flex mr-3 align-self-start pb_w-15"><i class="ion-ios-color-filter-outline  pb_icon-gradient"></i></div>
+			  <div class="media-body">
+				<h3 class="mt-2 mb-2 heading">Component Based Design</h3>
+				<p class="text-sans-serif pb_font-16">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+			  </div>
+			</div>    
+
+		  </div>
+		</div>
+		
+	  </div>
+	</div>
+  </div>
+</section>
+ 
+<!-- END section -->
+
+<!-- <section class="pb_section pb_slant-light pb_pb-220" id="section-reviews">
+  <div class="container">
+	<div class="row justify-content-center mb-1">
+	  <div class="col-md-6 text-center mb-5">
+		<h5 class="text-uppercase pb_font-15 mb-2 pb_color-dark-opacity-3 pb_letter-spacing-2"><strong>Reviews</strong></h5>
+		<h2>Good Review From Good People</h2>
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="col-md">
+		<div class="pb_slide_testimonial_sync_v1">
+		  <div class="pb_slider_content js-pb_slider_content2">
+			<div>
+			  <div class="media d-block text-center testimonial_v1 pb_quote_v2">
+				<div class="media-body">
+				  <div class="quote">&ldquo;</div>
+				  <blockquote class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</blockquote>
+				  <p>
+					<i class="ion-ios-star text-warning"></i>
+					<i class="ion-ios-star text-warning"></i>
+					<i class="ion-ios-star text-warning"></i>
+					<i class="ion-ios-star-half text-warning"></i>
+					<i class="ion-ios-star-outline text-warning"></i>
+				  </p>
+				  <h3 class="heading">Garry Alexander</h3>
+				  <span class="subheading">@garry</span>
+				  
+				</div>
+			  </div>
+			</div>
+			<div>
+			  <div class="media d-block text-center testimonial_v1 pb_quote_v2">
+				<div class="media-body">
+				  <div class="quote">&ldquo;</div>
+				  <blockquote class="mb-5">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</blockquote>
+				  <p>
+					<i class="ion-ios-star text-warning"></i>
+					<i class="ion-ios-star text-warning"></i>
+					<i class="ion-ios-star text-warning"></i>
+					<i class="ion-ios-star-half text-warning"></i>
+					<i class="ion-ios-star-outline text-warning"></i>
+				  </p>
+				  <h3 class="heading">Deborah Smith</h3>
+				  <span class="subheading">@deborah</span>
+				</div>
+			  </div>
+			</div>
+			<div>
+			  <div class="media d-block text-center testimonial_v1 pb_quote_v2">
+				<div class="media-body">
+				  <div class="quote">&ldquo;</div>
+				  <blockquote class="mb-5">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</blockquote>
+				  <p>
+					<i class="ion-ios-star text-warning"></i>
+					<i class="ion-ios-star text-warning"></i>
+					<i class="ion-ios-star text-warning"></i>
+					<i class="ion-ios-star-half text-warning"></i>
+					<i class="ion-ios-star-outline text-warning"></i>
+				  </p>
+				  <h3 class="heading">James Robertson</h3>
+				  <span class="subheading">@james</span>
+				</div>
+			  </div>
+			</div>
+			<div>
+			  <div class="media d-block text-center testimonial_v1 pb_quote_v2">
+				<div class="media-body">
+				  <div class="quote">&ldquo;</div>
+				  <blockquote class="mb-5">The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</blockquote>
+				  <p>
+					<i class="ion-ios-star text-warning"></i>
+					<i class="ion-ios-star text-warning"></i>
+					<i class="ion-ios-star text-warning"></i>
+					<i class="ion-ios-star-half text-warning"></i>
+					<i class="ion-ios-star-outline text-warning"></i>
+				  </p>
+				  <h3 class="heading">Marie Gibson</h3>
+				  <span class="subheading">@marie</span>
+				</div>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="row">
+			<div class="col-md-6 mx-auto">
+			  <div class="pb_slider_nav js-pb_slider_nav2">
+				<div class="author">
+				  <img class="img-fluid rounded-circle" src="assets/images/person_1.jpg" alt="Generic placeholder image">
+				</div>
+				<div class="author">
+				  <img class="img-fluid rounded-circle" src="assets/images/person_5.jpg" alt="Generic placeholder image">
+				</div>
+				<div class="author">
+				  <img class="img-fluid rounded-circle" src="assets/images/person_2.jpg" alt="Generic placeholder image">
+				</div>
+				<div class="author">
+				  <img class="img-fluid rounded-circle" src="assets/images/person_6.jpg" alt="Generic placeholder image">
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  
+		</div>
+		<!-- END sync_v1 -->
+	  
+	
+  
+
+ 
+<!-- END section -->
+
+<!-- <section class="pb_section bg-light pb_slant-white" id="section-pricing">
+  <div class="container">
+	<div class="row justify-content-center mb-5">
+	  <div class="col-md-6 text-center mb-5">
+		<h5 class="text-uppercase pb_font-15 mb-2 pb_color-dark-opacity-3 pb_letter-spacing-2"><strong>Pricing</strong></h5>
+		<h2>Choose Your Plans</h2>
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="col-md">
+		<div class="pb_pricing_v1 p-5 border text-center bg-white">
+		  <h3>Basic</h3>
+		  <span class="price"><sup>$</sup>19<span>month</span></span>
+		  <p class="pb_font-15">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
+		  <p class="mb-0"><a href="#" role="button" class="btn btn-secondary">Get started</a></p>
+		</div>
+	  </div>
+	  <div class="col-md">
+		<div class="pb_pricing_v1 p-5 border border-primary text-center bg-white">
+		  <h3>Business</h3>
+		  <span class="price"><sup>$</sup>39<span>month</span></span>
+		  <p class="pb_font-15">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
+		  <p class="mb-0"><a href="#" role="button" class="btn btn-primary btn-shadow-blue">Get started</a></p>
+		</div>
+	  </div>
+	  <div class="col-md">
+		<div class="pb_pricing_v1 p-5 border text-center bg-white">
+		  <h3>Free</h3>
+		  <span class="price"><sup>$</sup>99<span>month</span></span>
+		  <p class="pb_font-15">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
+		  <p class="mb-0"><a href="#" role="button" class="btn btn-secondary">Get started</a></p>
+		</div>
+	  </div>
+	</div>
+  </div>
+</section>
+ -->
+<!-- ENDs ection -->
+
+<section class="pb_section pb_slant-white" id="section-faq">
+  <div class="container">
+	<div class="row justify-content-center mb-5">
+	  <div class="col-md-6 text-center mb-5">
+		<h5 class="text-uppercase pb_font-15 mb-2 pb_color-dark-opacity-3 pb_letter-spacing-2"><strong>FAQ</strong></h5>
+		<h2>常见问题</h2>
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="col-md">
+		<div id="pb_faq" class="pb_accordion" data-children=".item">
+		  <div class="item">
+			<a data-toggle="collapse" data-parent="#pb_faq" href="#pb_faq1" aria-expanded="false" aria-controls="pb_faq1" class="pb_font-22 py-4 collapsed">有待完善.....</a>
+			<div id="pb_faq1" class="collapse" role="tabpanel" style="">
+			  <div class="py-3">
+			  <p>有待完善.....</p>
+			  <p></p>
+			  </div>
+			</div>
+		  </div>
+		  <div class="item">
+			<a data-toggle="collapse" data-parent="#pb_faq" href="#pb_faq2" aria-expanded="false" aria-controls="pb_faq2" class="pb_font-22 py-4 collapsed">有待完善.....</a>
+			<div id="pb_faq2" class="collapse" role="tabpanel" style="">
+			  <div class="py-3">
+				<p>有待完善.....</p>
+			  </div>
+			</div>
+		  </div>
+		  
+
+		 
+
+		</div>
+	  </div>
+	</div>
+  </div>
+</section>
+
+<section class="pb_xl_py_cover overflow-hidden pb_slant-light pb_gradient_v1 cover-bg-opacity-8" style="background-image: url(assets/images/1900x1200_img_5.jpg)">
+  <div class="container">
+	<div class="row align-items-center justify-content-center">
+	  <div class="col-md-5 justify-content-center">
+		<h2 class="heading mb-5 pb_font-40">建设施工中....</h2>
+		<div class="sub-heading">
+		  <p class="mb-4">建设施工中....，建设施工中.... <a href="#" target="_blank">bor233.com</a></p>
+		</div>
+	  </div> 
+	  <div class="col-md-1"></div>
+	</div>
+  </div>
+</section>
+
+<!-- END section -->
+
+<footer class="pb_footer bg-light" role="contentinfo">
+  <div class="container">
+	<div class="row text-center">
+	  <div class="col">
+		<ul class="list-inline">
+		  <li class="list-inline-item"><a href="#" class="p-2"><i class="fa fa-facebook"></i></a></li>
+		  <li class="list-inline-item"><a href="#" class="p-2"><i class="fa fa-twitter"></i></a></li>
+		  <li class="list-inline-item"><a href="#" class="p-2"><i class="fa fa-linkedin"></i></a></li>
+		</ul>
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="col text-center">
+		<p class="pb_font-14">Roam漫游社区2020，版权所有<a href="#" title="" target="_blank"></a></p>
+	  </div>
+	</div>
+  </div>
+</footer>
+
+<!-- loader -->
+<div id="pb_loader" class="fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#1d82ff"></circle></svg></div>
+
+
+
+<script src="assets/js/jquery.min.js"></script>
+
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
+
+<script src="assets/js/jquery.waypoints.min.js"></script>
+<script src="assets/js/jquery.easing.1.3.js"></script>
+
+<script src="assets/js/main.js"></script><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google 翻译"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">原文</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">提供更好的翻译建议</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+
+
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body></html>
